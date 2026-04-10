@@ -52,13 +52,24 @@ const Step1Welcome = ({ onNext }: { onNext: () => void }) => (
       Maria tem uma oração especial para você agora 🙏
     </p>
     
-    <div className="w-full aspect-square bg-blue-50 rounded-2xl mb-8 overflow-hidden relative shadow-md border border-blue-100 flex items-center justify-center p-4">
-       {/* Placeholder for the specific image */}
-       <div className="text-center">
+    <div className="w-full aspect-square rounded-2xl mb-8 overflow-hidden relative shadow-md border border-blue-100 flex items-center justify-center bg-blue-50">
+       <img 
+         src="/caminhando-com-maria.png" 
+         alt="Caminhando com Maria" 
+         className="w-full h-full object-cover"
+         onError={(e) => {
+           // Fallback if image is not found
+           e.currentTarget.style.display = 'none';
+           e.currentTarget.nextElementSibling?.classList.remove('hidden');
+         }}
+       />
+       {/* Fallback content while image is not uploaded */}
+       <div className="text-center hidden absolute inset-0 flex flex-col items-center justify-center bg-blue-50">
          <Heart className="w-16 h-16 text-blue-400 mx-auto mb-2" />
          <h2 className="text-xl font-serif text-blue-800">CAMINHANDO</h2>
          <h3 className="text-lg font-serif text-blue-600">COM MARIA</h3>
          <p className="text-sm text-blue-500 mt-4 italic">rogai por nós</p>
+         <p className="text-xs text-red-500 mt-4 px-4">Faça o upload da imagem como "caminhando-com-maria.png" na pasta public</p>
        </div>
     </div>
 
