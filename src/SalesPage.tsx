@@ -143,23 +143,6 @@ export default function SalesPage() {
             ))}
           </div>
 
-          {/* App Mockup */}
-          <div className="w-full bg-gray-100 rounded-xl mb-4 overflow-hidden relative min-h-[400px] flex items-center justify-center border border-gray-200">
-             <img 
-               src="/app-mockup.png" 
-               alt="App Mockup" 
-               className="w-full h-auto object-contain"
-               onError={(e) => {
-                 e.currentTarget.style.display = 'none';
-                 e.currentTarget.nextElementSibling?.classList.remove('hidden');
-               }}
-             />
-             <div className="text-center hidden absolute inset-0 flex flex-col items-center justify-center bg-gray-100">
-               <p className="text-xs text-red-500 mt-4 px-4">Faça o upload da imagem do app como "app-mockup.png" na pasta public</p>
-             </div>
-          </div>
-          <p className="text-blue-600 font-bold text-center mb-12">+ de 1 milhão de usuários ativos</p>
-
           {/* Trust Section */}
           <h2 className="text-xl font-bold text-amber-900 text-center mb-2">
             Nosso Devocional é confiável?
