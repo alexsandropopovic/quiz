@@ -4,7 +4,7 @@ import { Check, Lock, ChevronDown, ChevronUp, Gift, ShieldCheck } from 'lucide-r
 const Logo = () => (
   <div className="flex flex-col items-center justify-center py-6">
     <img 
-      src="/logo.png" 
+      src="/Logo.png" 
       alt="Sagrado 365 Dias com Maria" 
       className="h-24 w-auto object-contain"
       onError={(e) => {
@@ -43,8 +43,8 @@ const PricingBox = () => (
   </div>
 );
 
-const BuyButton = ({ text = "ADQUIRIR MEU DEVOCIONAL!" }) => (
-  <button className="w-full bg-[#10b981] hover:bg-[#059669] text-white font-bold py-4 rounded-xl shadow-lg mb-4 flex items-center justify-center gap-2 text-lg transition-transform active:scale-95">
+const BuyButton = ({ text = "ADQUIRIR MEU DEVOCIONAL!", className = "mb-4" }) => (
+  <button className={`w-full bg-[#10b981] hover:bg-[#059669] text-white font-bold py-4 rounded-xl shadow-lg flex items-center justify-center gap-2 text-lg transition-transform active:scale-95 ${className}`}>
     {text}
   </button>
 );
@@ -78,7 +78,7 @@ const FaqItem = ({ question, answer }: { question: string, answer: string }) => 
 export default function SalesPage() {
   return (
     <div className="min-h-screen bg-white flex justify-center font-sans text-gray-800">
-      <div className="w-full max-w-md bg-white shadow-xl min-h-screen flex flex-col relative pb-10">
+      <div className="w-full max-w-md bg-white shadow-xl min-h-screen flex flex-col relative pb-28">
         
         {/* Header */}
         <div className="border-b-4 border-amber-600">
@@ -259,11 +259,12 @@ export default function SalesPage() {
           {/* Footer */}
           <Logo />
           <BuyButton text="ADQUIRIR MEU SAGRADO!" />
-          
-          <p className="text-xs text-gray-400 text-center mt-8">
-            © 2026 - Criado via inlead.digital | Central de anúncios
-          </p>
+         
+        </div>
 
+        {/* Sticky Bottom Button */}
+        <div className="fixed bottom-0 w-full max-w-md bg-white border-t border-gray-200 p-4 z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+          <BuyButton className="mb-0" />
         </div>
       </div>
     </div>

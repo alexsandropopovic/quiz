@@ -9,7 +9,7 @@ import SalesPage from './SalesPage';
 const Logo = () => (
   <div className="flex flex-col items-center justify-center py-6">
     <img 
-      src="/logo.jpg" 
+      src="/Logo.png" 
       alt="Sagrado 365 Dias com Maria" 
       className="h-24 w-auto object-contain"
       onError={(e) => {
