@@ -233,22 +233,15 @@ const Step5Sales = () => {
 
       {/* Video */}
       <div className="w-full aspect-video bg-gray-900 rounded-2xl mb-6 relative overflow-hidden shadow-xl flex items-center justify-center">
-        <video 
-          src="/video.mp4" 
-          controls
-          className="w-full h-full object-cover"
-          poster="https://picsum.photos/seed/priest/600/400"
-          onError={(e) => {
-            e.currentTarget.style.display = 'none';
-            e.currentTarget.nextElementSibling?.classList.remove('hidden');
+        <div 
+          className="w-full h-full"
+          dangerouslySetInnerHTML={{
+            __html: `
+              <style>wistia-player[media-id='qwq20ms9wm']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/qwq20ms9wm/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
+              <wistia-player media-id="qwq20ms9wm" aspect="1.7777777777777777" style="width: 100%; height: 100%;"></wistia-player>
+            `
           }}
-        >
-          Seu navegador não suporta a tag de vídeo.
-        </video>
-        <div className="text-center hidden absolute inset-0 flex flex-col items-center justify-center bg-gray-900">
-          <Play className="w-12 h-12 text-gray-500 mb-2" />
-          <p className="text-xs text-red-500 mt-4 px-4">Faça o upload do vídeo como "video.mp4" na pasta public</p>
-        </div>
+        />
       </div>
 
       <button 

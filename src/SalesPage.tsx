@@ -44,9 +44,14 @@ const PricingBox = () => (
 );
 
 const BuyButton = ({ text = "ADQUIRIR MEU DEVOCIONAL!", className = "mb-4" }) => (
-  <button className={`w-full bg-[#10b981] hover:bg-[#059669] text-white font-bold py-4 rounded-xl shadow-lg flex items-center justify-center gap-2 text-lg transition-transform active:scale-95 ${className}`}>
+  <a 
+    href="https://pay.cakto.com.br/kfp2td9_842470"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`w-full bg-[#10b981] hover:bg-[#059669] text-white font-bold py-4 rounded-xl shadow-lg flex items-center justify-center gap-2 text-lg transition-transform active:scale-95 ${className}`}
+  >
     {text}
-  </button>
+  </a>
 );
 
 const SecurityBadge = () => (
@@ -201,7 +206,7 @@ export default function SalesPage() {
           <div className="w-full flex flex-col items-center mb-12">
             <div className="w-32 h-32 bg-gray-100 rounded-full mb-6 relative overflow-hidden flex items-center justify-center">
                <img 
-                 src="/selo-garantia.png" 
+                 src="/selo-garantia.jpg" 
                  alt="Selo de Garantia" 
                  className="w-full h-full object-contain"
                  onError={(e) => {
