@@ -3,7 +3,16 @@ import { Check, Lock, ChevronDown, ChevronUp, Gift, ShieldCheck } from 'lucide-r
 
 const Logo = () => (
   <div className="flex flex-col items-center justify-center py-6">
-    <div className="text-amber-600 font-serif text-3xl font-bold tracking-wider flex items-center gap-2">
+    <img 
+      src="/logo.png" 
+      alt="Sagrado 365 Dias com Maria" 
+      className="h-24 w-auto object-contain"
+      onError={(e) => {
+        e.currentTarget.style.display = 'none';
+        e.currentTarget.nextElementSibling?.classList.remove('hidden');
+      }}
+    />
+    <div className="hidden text-amber-600 font-serif text-3xl font-bold tracking-wider flex items-center gap-2">
       <span className="text-4xl">👑</span>
       <div className="flex flex-col items-center leading-none">
         <span>SAGRADO</span>
