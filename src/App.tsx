@@ -233,15 +233,13 @@ const Step5Sales = () => {
 
       {/* Video */}
       <div className="w-full aspect-video bg-gray-900 rounded-2xl mb-6 relative overflow-hidden shadow-xl flex items-center justify-center">
-        <div 
-          className="w-full h-full"
-          dangerouslySetInnerHTML={{
-            __html: `
-              <style>wistia-player[media-id='qwq20ms9wm']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/qwq20ms9wm/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
-              <wistia-player media-id="qwq20ms9wm" aspect="1.7777777777777777" style="width: 100%; height: 100%;"></wistia-player>
-            `
-          }}
-        />
+        <iframe 
+          src="https://fast.wistia.net/embed/iframe/qwq20ms9wm?videoFoam=true" 
+          title="Video" 
+          allow="autoplay; fullscreen" 
+          frameBorder="0" 
+          className="w-full h-full absolute top-0 left-0"
+        ></iframe>
       </div>
 
       <button 
