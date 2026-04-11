@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import { Check, Lock, ChevronDown, ChevronUp, Gift, ShieldCheck } from 'lucide-react';
 
+import LogoImg from './assets/Logo.png';
+import DepoimentosFioImg from './assets/depoimentos-fio.png';
+import DepoimentoLiciaImg from './assets/depoimento-licia.png';
+import SeloGarantiaImg from './assets/selo-garantia.jpg';
+
 const Logo = () => (
   <div className="flex flex-col items-center justify-center py-6">
     <img 
-      src="/Logo.png" 
+      src={LogoImg} 
       alt="Sagrado 365 Dias com Maria" 
       className="h-24 w-auto object-contain"
       onError={(e) => {
@@ -99,7 +104,7 @@ export default function SalesPage() {
           
           <div className="w-full bg-gray-100 rounded-xl mb-8 overflow-hidden relative min-h-[300px] flex items-center justify-center border border-gray-200">
              <img 
-               src="/depoimentos-fio.png" 
+               src={DepoimentosFioImg} 
                alt="Depoimentos" 
                className="w-full h-auto object-contain"
                onError={(e) => {
@@ -158,7 +163,7 @@ export default function SalesPage() {
 
           <div className="w-full bg-gray-100 rounded-xl mb-6 overflow-hidden relative min-h-[200px] flex items-center justify-center border border-gray-200">
              <img 
-               src="/depoimento-licia.png" 
+               src={DepoimentoLiciaImg} 
                alt="Depoimento Lícia" 
                className="w-full h-auto object-contain"
                onError={(e) => {
@@ -206,7 +211,7 @@ export default function SalesPage() {
           <div className="w-full flex flex-col items-center mb-12">
             <div className="w-32 h-32 bg-gray-100 rounded-full mb-6 relative overflow-hidden flex items-center justify-center">
                <img 
-                 src="/selo-garantia.jpg" 
+                 src={SeloGarantiaImg} 
                  alt="Selo de Garantia" 
                  className="w-full h-full object-contain"
                  onError={(e) => {
