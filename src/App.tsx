@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, Check, Lock, Play, Star, ShieldCheck, MessageCircle, BookOpen, Heart } from 'lucide-react';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
-import Admin from './Admin';
 import SalesPage from './SalesPage';
 
 // --- Components ---
@@ -306,7 +305,6 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<QuizFunnel />} />
-        <Route path="/admin" element={<Admin />} />
         <Route path="/vendas" element={<SalesPage />} />
       </Routes>
     </BrowserRouter>
