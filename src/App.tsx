@@ -3,12 +3,17 @@ import { ChevronRight, Check, Lock, Play, Star, ShieldCheck, MessageCircle, Book
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import SalesPage from './SalesPage';
 
+import LogoImg from './assets/Logo.png';
+import CaminhandoImg from './assets/caminhando-com-maria.png';
+import LivroImg from './assets/livro-de-oracoes.png';
+import DepoimentoImg from './assets/depoimento.png';
+
 // --- Components ---
 
 const Logo = () => (
   <div className="flex flex-col items-center justify-center py-6">
     <img 
-      src="/Logo.png" 
+      src={LogoImg} 
       alt="Sagrado 365 Dias com Maria" 
       className="h-24 w-auto object-contain"
       onError={(e) => {
@@ -63,7 +68,7 @@ const Step1Welcome = ({ onNext }: { onNext: () => void }) => (
     
     <div className="w-full aspect-square rounded-2xl mb-8 overflow-hidden relative shadow-md border border-blue-100 flex items-center justify-center bg-blue-50">
        <img 
-         src="/caminhando-com-maria.png" 
+         src={CaminhandoImg} 
          alt="Caminhando com Maria" 
          className="w-full h-full object-cover"
          onError={(e) => {
@@ -151,7 +156,7 @@ const Step3Prayer = ({ onNext }: { onNext: () => void }) => (
 
     <div className="w-full aspect-square bg-amber-50 rounded-xl mb-8 overflow-hidden shadow-inner flex items-center justify-center border border-amber-100 relative">
        <img 
-         src="/livro-de-oracoes.png" 
+         src={LivroImg} 
          alt="Livro de Orações" 
          className="w-full h-full object-cover"
          onError={(e) => {
@@ -182,7 +187,7 @@ const Step4Testimonial = ({ onNext }: { onNext: () => void }) => (
 
     <div className="w-full rounded-xl overflow-hidden shadow-md mb-8 border border-gray-200 relative bg-gray-100 min-h-[300px] flex items-center justify-center">
        <img 
-         src="/depoimento.png" 
+         src={DepoimentoImg} 
          alt="Depoimento" 
          className="w-full h-auto object-contain"
          onError={(e) => {
